@@ -1,5 +1,5 @@
 <%@ page import="java.util.List" %>
-<%@ page import="model.Question" %>
+<%@ page import="fr.ubdx.net.model.Question" %>
 
 <%
 List<Question> questions =

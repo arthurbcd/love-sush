@@ -1,7 +1,7 @@
 <%@ page import="java.util.List" %>
 
-<%@ page import="model.Question" %>
-<%@ page import="model.Answer" %>
+<%@ page import="fr.ubdx.net.model.Question" %>
+<%@ page import="fr.ubdx.net.model.Answer" %>
 
 <%
 List<Question> questions =
@@ -17,7 +17,7 @@ request.getAttribute("answers");
 
 <body>
 
-<h1>Réponses des utilisateurs</h1>
+<h1>Rï¿½ponses des utilisateurs</h1>
 
 <%
 for (Answer answer : answers) {
