@@ -16,7 +16,7 @@
                 <div class="list-group">
                     <a href="adminMenu.jsp" class="list-group-item list-group-item-action">Gérer le Menu</a>
                     <a href="createQuestions.jsp" class="list-group-item list-group-item-action active">Créer des questions</a>
-                    <a href="adminAnswers.jsp" class="list-group-item list-group-item-action">Voir les réponses</a>
+                    <a href="../AdminAnswersServlet" class="list-group-item list-group-item-action">Voir les réponses</a>
                     <a href="../index.jsp" class="list-group-item list-group-item-action list-group-item-secondary">Retour au site</a>
                 </div>
             </div>
