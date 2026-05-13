@@ -9,7 +9,10 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center">Bienvenue chez Love Sushi 🍣</h1>
+        <div class="d-flex justify-content-between align-items-center">
+            <h1>Bienvenue chez Love Sushi 🍣</h1>
+            <span class="badge bg-secondary">v1.0.1</span>
+        </div>
         <hr>
         <div class="row">
             <div class="col-md-6">
