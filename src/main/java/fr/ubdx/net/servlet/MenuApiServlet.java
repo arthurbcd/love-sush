@@ -18,15 +18,34 @@ public class MenuApiServlet extends HttpServlet {
         resp.setContentType("application/json");
         resp.setCharacterEncoding("UTF-8");
         List<Sushi> sushis = SushiStorage.getInstance().getSushis();
-        
+
         PrintWriter out = resp.getWriter();
         out.print("[");
         for (int i = 0; i < sushis.size(); i++) {
             Sushi s = sushis.get(i);
-            out.print("{\"id\":\"" + s.getId() + "\", \"name\":\"" + s.getName() + "\", \"price\":" + s.getPrice() + "}");
+            out.print("{\"id\":\"" + s.getId() + "\", \"name\":\"" + s.getName() + "\", \"description\":\"" + s.getDescription() + "\", \"price\":" + s.getPrice() + "}");
             if (i < sushis.size() - 1) out.print(",");
         }
         out.print("]");
         out.flush();
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String action = req.getParameter("action");
+        SushiStorage storage = SushiStorage.getInstance();
+
+        if ("add".equals(action)) {
+            String name = req.getParameter("name");
+            String description = req.getParameter("description");
+            double price = Double.parseDouble(req.getParameter("price"));
+            String id = String.valueOf(System.currentTimeMillis());
+            storage.addSushi(new Sushi(id, name, description, price));
+        } else if ("delete".equals(action)) {
+            String id = req.getParameter("id");
+            storage.removeSushi(id);
+        }
+
+        resp.setStatus(HttpServletResponse.SC_OK);
     }
 }

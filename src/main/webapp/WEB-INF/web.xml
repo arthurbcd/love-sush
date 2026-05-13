@@ -2,11 +2,11 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" version="5.0">
 
   <display-name>TD5</display-name>
-  
+
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  
+
   <!-- ========================================= -->
     <!-- CREATE QUESTIONS SERVLET -->
     <!-- ========================================= -->
@@ -152,5 +152,25 @@
             /AdminAnswersServlet
         </url-pattern>
 
+    </servlet-mapping>
+
+    <!-- MENU API SERVLET -->
+    <servlet>
+        <servlet-name>MenuApiServlet</servlet-name>
+        <servlet-class>fr.ubdx.net.servlet.MenuApiServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MenuApiServlet</servlet-name>
+        <url-pattern>/api/menu</url-pattern>
+    </servlet-mapping>
+
+    <!-- RESERVATION API SERVLET -->
+    <servlet>
+        <servlet-name>ReservationApiServlet</servlet-name>
+        <servlet-class>fr.ubdx.net.servlet.ReservationApiServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReservationApiServlet</servlet-name>
+        <url-pattern>/api/reservation</url-pattern>
     </servlet-mapping>
 </web-app>

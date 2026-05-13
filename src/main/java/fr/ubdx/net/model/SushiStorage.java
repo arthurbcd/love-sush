@@ -28,4 +28,8 @@ public class SushiStorage {
     public void addSushi(Sushi s) {
         sushis.add(s);
     }
+
+    public void removeSushi(String id) {
+        sushis.removeIf(s -> s.getId().equals(id));
+    }
 }

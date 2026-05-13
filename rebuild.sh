@@ -34,6 +34,9 @@ cd "$PROJECT_DIR/build/war" && jar cvf ../love-sush.war * > /dev/null
 
 # 4. Deploy
 echo "🚚 Deploying to Tomcat..."
-cp "$PROJECT_DIR/build/love-sush.war" "$TOMCAT_WEBAPPS/"
+# Deploy by expanding directly into the folder to ensure immediate update
+rm -rf "$TOMCAT_WEBAPPS/love-sush"
+mkdir -p "$TOMCAT_WEBAPPS/love-sush"
+cp -r "$PROJECT_DIR/build/war/"* "$TOMCAT_WEBAPPS/love-sush/"
 
 echo "✅ Done! Application updated to $NEW_VER"
