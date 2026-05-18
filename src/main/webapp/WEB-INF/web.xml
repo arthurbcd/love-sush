@@ -154,23 +154,4 @@
 
     </servlet-mapping>
 
-    <!-- MENU API SERVLET -->
-    <servlet>
-        <servlet-name>MenuApiServlet</servlet-name>
-        <servlet-class>fr.ubdx.net.servlet.MenuApiServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>MenuApiServlet</servlet-name>
-        <url-pattern>/api/menu</url-pattern>
-    </servlet-mapping>
-
-    <!-- RESERVATION API SERVLET -->
-    <servlet>
-        <servlet-name>ReservationApiServlet</servlet-name>
-        <servlet-class>fr.ubdx.net.servlet.ReservationApiServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ReservationApiServlet</servlet-name>
-        <url-pattern>/api/reservation</url-pattern>
-    </servlet-mapping>
 </web-app>

@@ -13,7 +13,7 @@
         <div class="container mt-5">
             <div class="d-flex justify-content-between align-items-center">
                 <h1>Bienvenue chez Love Sushi 🍣</h1>
-                <span class="badge bg-secondary">v1.0.7</span>
+                <span class="badge bg-secondary">v1.0.10</span>
             </div>
             <hr>
             <div class="row">
